@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 export default class App extends Component {
 
-  static propTypes = {
-    children: React.PropTypes.element.isRequired
-  }
+  // static propTypes = {
+  //   children: React.PropTypes.element.isRequired
+  // }
   render () {
     return <div>
       <nav>
