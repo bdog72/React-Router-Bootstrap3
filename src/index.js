@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import Rooter from './components/Rooter'
+import App from './components/App'
 
 import './styles/screen.scss'
 
@@ -14,11 +14,11 @@ const render = (app) => {
   )
 }
 
-render(<Rooter />)
+render(<App />)
 
 if (module.hot) {
   module.hot.accept('./components/App', () => {
-    const NextApp = require('./components/Rooter').default
+    const NextApp = require('./components/App').default
     render(<NextApp />)
   })
 }

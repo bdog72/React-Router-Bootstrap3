@@ -1,23 +1,18 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
+import { Router, Route, browserHistory } from 'react-router'
+import Layout from './Layout'
+import Home from './Home'
+import Stuff from './Stuff'
+import Contact from './Contact'
 export default class App extends Component {
 
-  // static propTypes = {
-  //   children: React.PropTypes.element.isRequired
-  // }
   render () {
-    return <div>
-      <nav>
-        <h1>Single Page App</h1>
-        <ul className='header'>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/stuff'>Stuff</Link></li>
-          <li><Link to='/contact'>Contact</Link></li>
-        </ul>
-      </nav>
-      <main className='content'>
-        {this.props.children}
-      </main>
-    </div>
+    return <Router history={browserHistory}>
+      <Route component={Layout}>
+        <Route path='/' component={Home} />
+        <Route path='/stuff' component={Stuff} />
+        <Route path='/contact' component={Contact} />
+      </Route>
+    </Router>
   }
 }
