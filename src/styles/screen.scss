@@ -28,6 +28,8 @@ ul.header li {
   display: inline;
   list-style-type: none;
   margin: 0;
+  padding: 20px;
+  color: white;
 }
 
 ul.header {
@@ -36,7 +38,7 @@ ul.header {
 }
 
 ul.header li a {
-  color: #fff;
+  color: red;
   font-weight: bold;
   text-decoration: none;
   padding: 20px;

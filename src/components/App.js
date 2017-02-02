@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import Home from './Home'
 import { Link } from 'react-router'
 export default class App extends Component {
 
@@ -8,14 +7,17 @@ export default class App extends Component {
   }
   render () {
     return <div>
-      <h1>Simple SPA</h1>
-      <ul className='header' />
-      <li><Link to='/'>Home</Link></li>
-      <li>Stuff</li>
-      <li>Contact</li>
-      <div className='content'>
+      <nav>
+        <h1>Single Page App</h1>
+        <ul className='header'>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/stuff'>Stuff</Link></li>
+          <li><Link to='/contact'>Contact</Link></li>
+        </ul>
+      </nav>
+      <main className='content'>
         {this.props.children}
-      </div>
+      </main>
     </div>
   }
 }
