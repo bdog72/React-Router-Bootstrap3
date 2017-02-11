@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-export default class App extends Component {
+export default class Layout extends Component {
 
   static propTypes = {
     children: React.PropTypes.element.isRequired
